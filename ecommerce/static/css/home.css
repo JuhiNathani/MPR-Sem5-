@@ -1,0 +1,68 @@
+body{
+
+    background-image: url('static/images/bg2.png');
+    background-repeat: no-repeat;
+    background-size: 1000px;
+    overflow-x: hidden;
+    background-size:cover;  
+    margin: 0px;
+    padding-bottom: 100px;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    padding-left:  32rem;
+}
+
+.nav-item{
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
+
+.right{
+    padding-left: 20rem;
+}
+
+.buton{
+    text-decoration: none;
+    padding: .5rem;
+    background-color: #00ffbf;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: 0.2s all;
+}
+
+.buton:active {
+    transform: scale(0.66);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
+
+.head h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    display: inline-block;
+    width: fit-content;
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    margin: 5rem;
+    font-family: "Monospace,Monaco";
+    animation: 
+      typing 3.5s steps(60,end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
