@@ -6,7 +6,6 @@ body {
     overflow-x: hidden;
     background-size: cover;
     margin: 0px;
-    padding-bottom: 100px;
     object-fit: contain;
 }
 
@@ -71,7 +70,7 @@ a:hover {
 .head h1 {
     overflow: hidden;
     /* Ensures the content is not revealed until the animation */
-    display: inline-block;
+    display: block;
     width: fit-content;
     border-right: .15em transparent;
     /* The typwriter cursor */
@@ -81,13 +80,31 @@ a:hover {
     /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
     /* Adjust as needed */
-    margin: 5rem 5rem 0.7rem 5rem;
+    margin: 5rem 5rem 0rem 5rem;
     font-family: "Monospace,Monaco";
     font-size: 80px;
     font-weight: 600;
     color: rgb(255, 255, 255);
+    line-height: 55px;
     animation:
         typing 3.5s steps(60, end),
+        blink-caret .75s step-end infinite;
+}
+
+.head h3 {
+    overflow: hidden;
+    display: block;
+    border-right: .18rem transparent;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.13rem;
+    margin: 0.1rem 5rem 0rem 5rem;
+    font-family: "Monospace,Monaco";
+    font-size: 30px;
+    font-weight: 100;
+    color: rgb(255, 255, 255);
+    animation:
+        typing 4s steps(60, end),
         blink-caret .75s step-end infinite;
 }
 
@@ -109,23 +126,33 @@ a:hover {
     to {
         border-color: transparent
     }
+
     50% {
         border-color: white;
     }
 }
 
-.head h3 {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    padding: 10px 10px 20px 50px;
+.head p {
+    margin: 80px 750px 10px 80px;
+    font-weight: 200;
+    font-size: larger;
+    font-family: "Monospace,Monaco";
+    letter-spacing: 0.11rem;
+    color: azure;
+    background: rgba(0, 0, 0, 0.3);
+    padding-left: 1rem;
+
+
 }
 
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-}
+} 
+animation: fadeInAnimation ease 3s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards; */
